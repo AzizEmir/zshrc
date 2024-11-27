@@ -164,7 +164,10 @@ alias   lu='du --summarize --human-readable * | sort --human-numeric-sort' # Hum
 
 ```zsh
 reorder_files_with_regex_pattern() {
-    file_list=($(ls -l | sort --key 1,1 --key 9 | awk '{print $9}'))
+    file_list=()
+    while IFS= read -r file; do
+        file_list+=("$file")
+    done < <(ls -1 | sort)
     total_count=${#file_list[@]}
     total_count_digits=${#total_count}
     counter=1
@@ -192,7 +195,10 @@ Example:
 
 ```zsh
 reorder_and_rename_files_with_regex_pattern() {
-    file_list=($(ls -l | sort --key 1,1 --key 9 | awk '{print $9}'))
+    file_list=()
+    while IFS= read -r file; do
+        file_list+=("$file")
+    done < <(ls -1 | sort)
     total_count=${#file_list[@]}
     total_count_digits=${#total_count}
     counter=1
