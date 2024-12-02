@@ -153,7 +153,7 @@ alias  c='clear'                       # Clear the terminal screen
 # ---------------------------
 alias   cp='cp --interactive --verbose'                       # Interactive and verbose copy
 alias   mv='mv --interactive --verbose'                       # Interactive and verbose move
-alias   rm='rm --interactive --verbose -I --preserve-root'    # Safe remove with verbose
+alias   rm='rm --interactive --verbose --preserve-root'    # Safe remove with verbose
 alias mdir='mkdir --parents  --verbose'                        # Create directory with verbose
 alias  els="exa --group --sort=type --icons"                  # Enhanced ls for group view with icons
 alias  ell="exa --long  --header    --classify --no-filesize --no-user     --no-permissions"    # Extended ls view
