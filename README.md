@@ -233,3 +233,5 @@ EOF
 
 sudo chmod +x /usr/local/bin/rip.py
 ```
+
+![image](https://github.com/user-attachments/assets/0a009ded-a5a5-4686-97d7-de96a0d1fd7d)
